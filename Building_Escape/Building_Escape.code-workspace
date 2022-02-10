@@ -10,7 +10,12 @@
 		}
 	],
 	"settings": {
-		"typescript.tsc.autoDetect": "off"
+		"typescript.tsc.autoDetect": "off",
+		"C_Cpp.default.forcedInclude": [
+			"${default}",
+			"F:\\GitRepos\\Unreal-Engine-4-Udemy-Projects-C-\\Building_Escape\\Intermediate\\Build\\Win64\\UE4Editor\\Development\\Building_Escape\\Definitions.Building_Escape.h",
+			"F:\\GitRepos\\Unreal-Engine-4-Udemy-Projects-C-\\Building_Escape\\Intermediate\\Build\\Win64\\Building_EscapeEditor\\Development\\Engine\\SharedPCH.Engine.h"
+		]
 	},
 	"extensions": {
 		"recommendations": [
