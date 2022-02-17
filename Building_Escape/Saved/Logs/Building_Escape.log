@@ -1842,3 +1842,4 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.02.17-21.43.14:471][450]  Building_Escape
 [2022.02.17-21.43.14:471][450]Launching UnrealBuildTool... [F:/EpicOyunlar/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Building_Escape,6931 Building_EscapeEditor Win64 Development -Project="F:/GitRepos/Unreal-Engine-4-Udemy-Projects-C-/Building_Escape/Building_Escape.uproject" "F:/GitRepos/Unreal-Engine-4-Udemy-Projects-C-/Building_Escape/Building_Escape.uproject"  -IgnoreJunk]
 [2022.02.17-21.43.14:506][450]Warning: Starting HotReload took  0.0s.
+[2022.02.17-21.44.33:352][993]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Cube2)
