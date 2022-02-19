@@ -55,7 +55,7 @@ void UGrabber::Release()
 	UE_LOG(LogTemp, Warning, TEXT("Grabber Released"));
 }
 
-void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
+void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
@@ -63,7 +63,8 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	FVector PlayerViewPointLocation;
 	FRotator PlayerViewPointRotation;
 
-	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
+	GetWorld()->GetFirstPlayerController()->
+	            GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
 	// UE_LOG(LogTemp, Warning, TEXT("Location:%s Rotation:%s "), *PlayerViewPointLocation.ToString(), *PlayerViewPointRotation.ToString());
 
 	// Draw a line from player showing the reach
@@ -84,7 +85,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
 		TraceParams);
 
-	AActor *HittedObject = Hit.GetActor();
+	AActor* HittedObject = Hit.GetActor();
 	if (HittedObject)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Hitted Object: %s"), *(HittedObject->GetName()));
