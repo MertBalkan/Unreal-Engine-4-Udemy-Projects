@@ -20,6 +20,7 @@ void UGrabber::BeginPlay()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if(!PhysicsHandle) return; // PhysicsHandle == nullptr
 	if (PhysicsHandle->GrabbedComponent)
 	{
 		//Move the object we are holding
@@ -43,10 +44,11 @@ void UGrabber::Grab()
 {
 	FHitResult HitResult = GetFirstPhysicsBodyInReach();
 	UPrimitiveComponent* ComponentToGrab = HitResult.GetComponent();
+	AActor* ActorHit = HitResult.GetActor();
 
-
-	if (HitResult.GetActor())
+	if (ActorHit)
 	{
+		if(!PhysicsHandle) return; // PhysicsHandle == nullptr
 		PhysicsHandle->GrabComponentAtLocation
 		(
 			ComponentToGrab,
@@ -58,14 +60,14 @@ void UGrabber::Grab()
 
 void UGrabber::Release()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Grabber Released"));
+	if(!PhysicsHandle) return; // PhysicsHandle == nullptr
 	PhysicsHandle->ReleaseComponent();
 }
 
 void UGrabber::FindPhysicsHandle()
 {
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
-	if (PhysicsHandle == nullptr)
+	if ( PhysicsHandle == nullptr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("No physics handle component found on %s"), *GetOwner()->GetName());
 	}

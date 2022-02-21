@@ -23,20 +23,19 @@ void UOpenDoor::BeginPlay()
 	CurrentYaw = InitialYaw;
 	OpenAngle += InitialYaw; //OpenAngle = OpenAngle + InitialYaw;
 
-	if(!PressurePlate)
+	if (!PressurePlate)
 	{
-		UE_LOG(LogTemp, Error, TEXT("%s has the open door component on it, but no pressureplate set!"), *GetOwner()->GetName());	
+		UE_LOG(LogTemp, Error, TEXT("%s has the open door component on it, but no pressureplate set!"),
+		       *GetOwner()->GetName());
 	}
-
-	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
 // Called every frame
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
-	if (TotalMassOfActors()> MassLimitForOpenDoors)
+
+	if (TotalMassOfActors() > MassLimitForOpenDoors)
 	{
 		OpenDoor(DeltaTime);
 		DoorLastOpened = GetWorld()->GetTimeSeconds();
@@ -47,8 +46,8 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 		if (GetWorld()->GetTimeSeconds() - DoorLastOpened > DoorCloseDelay)
 		{
 			CloseDoor(DeltaTime);
-		}	
-	}	
+		}
+	}
 }
 
 void UOpenDoor::OpenDoor(float DeltaTime)
@@ -56,7 +55,7 @@ void UOpenDoor::OpenDoor(float DeltaTime)
 	CurrentYaw = FMath::Lerp(CurrentYaw, OpenAngle, DeltaTime * DoorOpenSpeed);
 	FRotator DoorRotation = GetOwner()->GetActorRotation();
 	DoorRotation.Yaw = CurrentYaw;
-	GetOwner()->SetActorRotation(DoorRotation);	
+	GetOwner()->SetActorRotation(DoorRotation);
 }
 
 void UOpenDoor::CloseDoor(float DeltaTime)
@@ -64,19 +63,22 @@ void UOpenDoor::CloseDoor(float DeltaTime)
 	CurrentYaw = FMath::Lerp(CurrentYaw, InitialYaw, DeltaTime * DoorCloseSpeed);
 	FRotator DoorRotation = GetOwner()->GetActorRotation();
 	DoorRotation.Yaw = CurrentYaw;
-	GetOwner()->SetActorRotation(DoorRotation);	
+	GetOwner()->SetActorRotation(DoorRotation);
 }
 
 float UOpenDoor::TotalMassOfActors() const
 {
 	float TotalMass = 0.0f;
 	TArray<AActor*> OverlappingActors;
+	if (!PressurePlate) { return TotalMass; }
 	PressurePlate->GetOverlappingActors(OUT OverlappingActors);
 
-	for(AActor* Actor : OverlappingActors)
+	for (AActor* Actor : OverlappingActors)
 	{
+		if (!Actor) return TotalMass; 
 		TotalMass += Actor->FindComponentByClass<UPrimitiveComponent>()->GetMass();
+		UE_LOG(LogTemp, Warning, TEXT("Which actor overlapped: %s"), *Actor->GetName());
 	}
-	
+
 	return TotalMass;
 }
