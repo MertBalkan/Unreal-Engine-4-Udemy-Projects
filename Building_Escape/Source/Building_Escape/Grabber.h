@@ -29,11 +29,10 @@ private:
 	void Release();
 	void FindPhysicsHandle();
 	void SetupInputComponent();
-	void CalculatePlayerView(FVector&);
 	
+	FVector CalculatePlayerView();
+	FVector GetPlayersWorldPos();
 	FVector PlayerViewPointLocation;
-	FVector LineTraceEnd;
-	FVector LineTraceDirection;
 	FRotator PlayerViewPointRotation;
 	FHitResult GetFirstPhysicsBodyInReach();// Return the first actor within reach with physics body.
 };
