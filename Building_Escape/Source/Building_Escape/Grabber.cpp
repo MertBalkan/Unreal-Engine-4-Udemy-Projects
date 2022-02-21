@@ -58,7 +58,7 @@ void UGrabber::Grab()
 
 	GetWorld()->GetFirstPlayerController()->
 	            GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
-
+	
 	FVector LineTraceDirection = PlayerViewPointRotation.Vector();
 	FVector LineTraceEnd = PlayerViewPointLocation + (LineTraceDirection * Reach);
 	if (HitResult.GetActor())
