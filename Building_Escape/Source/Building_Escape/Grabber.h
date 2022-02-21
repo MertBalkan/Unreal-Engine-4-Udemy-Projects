@@ -24,13 +24,16 @@ private:
 	float Reach = 100.0f;
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
+	
 	void Grab();
 	void Release();
 	void FindPhysicsHandle();
 	void SetupInputComponent();
-	FHitResult GetFirstPhysicsBodyInReach();// Return the first actor within reach with physics body.
+	void CalculatePlayerView(FVector&);
+	
 	FVector PlayerViewPointLocation;
-	FRotator PlayerViewPointRotation;
-	FVector LineTraceDirection;
 	FVector LineTraceEnd;
+	FVector LineTraceDirection;
+	FRotator PlayerViewPointRotation;
+	FHitResult GetFirstPhysicsBodyInReach();// Return the first actor within reach with physics body.
 };

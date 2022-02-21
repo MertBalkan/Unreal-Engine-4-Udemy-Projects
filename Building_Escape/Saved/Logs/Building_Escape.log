@@ -1168,3 +1168,103 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.02.21-09.20.22:358][238]LogPlayLevel: Display: Destroying online subsystem :Context_3
 [2022.02.21-09.22.24:437][927]LogSlate: Window 'Message Log' being destroyed
 [2022.02.21-09.22.24:443][927]LogSlate: Window 'Message Log' being destroyed
+[2022.02.21-09.29.23:454][438]Candidate modules for hot reload:
+[2022.02.21-09.29.23:454][438]  Building_Escape
+[2022.02.21-09.29.23:454][438]Launching UnrealBuildTool... [F:/EpicOyunlar/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Building_Escape,0075 Building_EscapeEditor Win64 Development -Project="F:/GitRepos/Unreal-Engine-4-Udemy-Projects-C-/Building_Escape/Building_Escape.uproject" "F:/GitRepos/Unreal-Engine-4-Udemy-Projects-C-/Building_Escape/Building_Escape.uproject"  -IgnoreJunk]
+[2022.02.21-09.29.23:597][438]Warning: Starting HotReload took  0.1s.
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: New page: Compilation - Feb 21, 2022, 3:29:43 PM
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-).
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Parsing headers for Building_EscapeEditor
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   Running UnrealHeaderTool "F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Building_Escape.uproject" "F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Intermediate\Build\Win64\Building_EscapeEditor\Development\Building_EscapeEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\mert_\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Reflection code generated for Building_EscapeEditor in 4.0516828 seconds
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Building Building_EscapeEditor...
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Using Visual Studio 2019 14.29.30140 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade]
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade] Using backward-compatible build settings. The latest version of UE4 sets the following values by default, which may require code changes:
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade]     bLegacyPublicIncludePaths = false                 => Omits subfolders from public include paths to reduce compiler command line length. (Previously: true).
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade]     ShadowVariableWarningLevel = WarningLevel.Error   => Treats shadowed variable warnings as errors. (Previously: WarningLevel.Warning).
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade]     PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs   => Set in build.cs files to enables IWYU-style PCH model. See https://docs.unrealengine.com/en-US/Programming/BuildTools/UnrealBuildTool/IWYU/index.html. (Previously: PCHUsageMode.UseSharedPCHs).
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade] Suppress this message by setting 'DefaultBuildSettings = BuildSettingsVersion.V2;' in Building_EscapeEditor.Target.cs, and explicitly overriding settings that differ from the new defaults.
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: [Upgrade]
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Building 5 actions with 12 processes...
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   [1/5] Grabber.gen.cpp
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   [2/5] Grabber.cpp
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Source\Building_Escape\Grabber.cpp(86): warning C4458: 'LineTraceDirection' bildirimi i?lev s?n?f ?yesini gizliyor
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Source\Building_Escape\Grabber.h(36): note: 'UGrabber::LineTraceDirection' bildirimine bak?n
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   [3/5] UE4Editor-Building_Escape-0075.lib
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:      F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Intermediate\Build\Win64\UE4Editor\Development\Building_Escape\UE4Editor-Building_Escape-0075.lib kitapl??? ve F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Intermediate\Build\Win64\UE4Editor\Development\Building_Escape\UE4Editor-Building_Escape-0075.exp nesnesi olu?turuluyor
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   [4/5] UE4Editor-Building_Escape-0075.dll
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:      F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Intermediate\Build\Win64\UE4Editor\Development\Building_Escape\UE4Editor-Building_Escape-0075.suppressed.lib kitapl??? ve F:\GitRepos\Unreal-Engine-4-Udemy-Projects-C-\Building_Escape\Intermediate\Build\Win64\UE4Editor\Development\Building_Escape\UE4Editor-Building_Escape-0075.suppressed.exp nesnesi olu?turuluyor
+[2022.02.21-09.29.43:049][600]CompilerResultsLog:   [5/5] Building_EscapeEditor.target
+[2022.02.21-09.29.43:049][600]CompilerResultsLog: Total time in Parallel executor: 14.24 seconds
+[2022.02.21-09.29.43:050][600]CompilerResultsLog: Total execution time: 19.35 seconds
+[2022.02.21-09.29.43:050][600]LogMainFrame: MainFrame: Module compiling took 19.600 seconds
+[2022.02.21-09.29.43:093][600]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Building_Escape' in 0.0004 seconds. Added 4 classes and 2 folders.
+[2022.02.21-09.29.43:096][600]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.02.21-09.29.43:133][600]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0081 seconds. Added 3826 classes and 930 folders.
+[2022.02.21-09.29.43:133][600]Display: HotReload took 19.7s.
+[2022.02.21-09.31.17:407][178]LogTemp: Repeating last play command: Selected Viewport
+[2022.02.21-09.31.17:412][178]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.02.21-09.31.17:412][178]PIE: New page: PIE session: BuildingEscape (Feb 21, 2022, 3:31:17 PM)
+[2022.02.21-09.31.17:412][178]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_BuildingEscape
+[2022.02.21-09.31.17:417][178]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005496s)
+[2022.02.21-09.31.17:419][178]LogAIModule: Creating AISystem for world BuildingEscape
+[2022.02.21-09.31.17:767][178]LogPlayLevel: PIE: World Init took: (0.350155s)
+[2022.02.21-09.31.17:767][178]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/BuildingEscape.BuildingEscape to /Game/Levels/UEDPIE_0_BuildingEscape.BuildingEscape (0.355880s)
+[2022.02.21-09.31.17:773][178]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2022.02.21-09.31.17:774][178]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.02.21-09.31.17:774][178]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.02.21-09.31.17:774][178]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.02.21-09.31.17:774][178]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.02.21-09.31.17:774][178]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.02.21-09.31.17:774][178]LogAudioMixer: Display: Initializing audio mixer.
+[2022.02.21-09.31.17:778][178]LogAudioMixer: Display: 0: FrontLeft
+[2022.02.21-09.31.17:778][178]LogAudioMixer: Display: 1: FrontRight
+[2022.02.21-09.31.17:787][178]LogAudioMixer: Display: Using Audio Device Audio (THX Spatial Audio)
+[2022.02.21-09.31.17:787][178]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.02.21-09.31.17:787][178]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.02.21-09.31.17:787][178]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.02.21-09.31.17:788][178]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.02.21-09.31.17:788][178]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.02.21-09.31.17:788][178]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.02.21-09.31.17:789][178]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.02.21-09.31.17:789][178]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.02.21-09.31.17:789][178]LogInit: FAudioDevice initialized.
+[2022.02.21-09.31.17:789][178]LogAudio: Display: Audio Device (ID: 4) registered with world 'BuildingEscape'.
+[2022.02.21-09.31.17:802][178]LogLoad: Game class is 'MyBuilding_EscapeGameModeBase_C'
+[2022.02.21-09.31.17:804][178]LogWorld: Bringing World /Game/Levels/UEDPIE_0_BuildingEscape.BuildingEscape up for play (max tick rate 60) at 2022.02.21-12.31.17
+[2022.02.21-09.31.17:804][178]LogWorld: Bringing up level for play took: 0.001105
+[2022.02.21-09.31.17:804][178]LogOnline: OSS: Creating online subsystem instance for: :Context_4
+[2022.02.21-09.31.17:806][178]LogTemp: Error: Sphere_5 has the open door component on it, but no pressureplate set!
+[2022.02.21-09.31.17:806][178]LogTemp: Warning: Sphere_5 postition in world is: X=-90.000 Y=230.000 Z=180.000
+[2022.02.21-09.31.17:807][178]LogTemp: Warning: Input component found DefaultPawn_BP_C_0
+[2022.02.21-09.31.17:807][178]PIE: Server logged in
+[2022.02.21-09.31.17:808][178]PIE: Play in editor total start time 0.397 seconds.
+[2022.02.21-09.31.18:486][219]LogTemp: Warning: Grabber Pressed
+[2022.02.21-09.31.18:486][219]LogTemp: Warning: Hitted Object: Cube2_2
+[2022.02.21-09.31.19:503][280]LogTemp: Warning: Grabber Released
+[2022.02.21-09.31.20:204][322]LogTemp: Warning: Grabber Pressed
+[2022.02.21-09.31.21:071][374]LogTemp: Warning: Grabber Released
+[2022.02.21-09.31.21:503][400]LogTemp: Warning: Grabber Pressed
+[2022.02.21-09.31.21:503][400]LogTemp: Warning: Hitted Object: Cube2_2
+[2022.02.21-09.31.21:920][425]LogTemp: Warning: Grabber Released
+[2022.02.21-09.31.22:462][455]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.21-09.31.22:462][455]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_BuildingEscape
+[2022.02.21-09.31.22:462][455]LogWorld: UWorld::CleanupWorld for BuildingEscape, bSessionEnded=true, bCleanupResources=true
+[2022.02.21-09.31.22:463][455]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.02.21-09.31.22:474][455]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.02.21-09.31.22:476][455]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.02.21-09.31.22:481][455]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.02.21-09.31.22:481][455]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.02.21-09.31.22:482][455]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.02.21-09.31.22:484][455]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.21-09.31.22:485][455]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2022.02.21-09.31.22:525][457]LogPlayLevel: Display: Destroying online subsystem :Context_4
