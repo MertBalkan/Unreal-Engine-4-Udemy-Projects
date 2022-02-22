@@ -1,4 +1,5 @@
 #include "Grabber.h"
+#include "Components/AudioComponent.h"
 #include "CollisionQueryParams.h"
 #include "DrawDebugHelpers.h"
 #include "Engine/World.h"
